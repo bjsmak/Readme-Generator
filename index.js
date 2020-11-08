@@ -12,6 +12,12 @@ const questions = [
     message:"What is your project title?"
 }, 
 {
+    type:"list",
+    name:"badge",
+    message:"Choose from the following badges",
+    choices: ['MIT', 'Apache', 'IBM', 'Perl']
+}, 
+{
     type:"input",
     name:"description",
     message:"Please enter description"
@@ -33,13 +39,8 @@ const questions = [
 },
 {
     type:"input",
-    name:"license",
-    message:"Please provide your license"
-},
-{
-    type:"input",
     name:"github",
-    message:"Please enter your Github Username"
+    message:"Please enter your Github username"
 },
 {
     type:"input",
@@ -48,18 +49,20 @@ const questions = [
 },
 ];
 
+//Inquirer to generate user questions
 inquirer
     .prompt(questions)
     .then(function(data){
-        const queryURL = 'https://api.github.com/users/${data.github}';
-
+        //API call for github user info
+        const queryURL = `https://api.github.com/users/${data.github}`;
+        //Axios call
         axios.get(queryURL).then(function(res) {
 
             const gitHubProfile = {
-                name: res.data.name,
+                name: res.data.login,
                 profile: res.data.html_url
             };
-
+            //Write README with questions array data and github info
             fs.writeFile("README.md", generateMD(data,gitHubProfile), function(err) {
                 if (err) {
                   throw err;
