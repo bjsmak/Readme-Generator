@@ -66,7 +66,7 @@ inquirer
             fs.writeFile("README.md", generateMD(data,gitHubProfile), function(err) {
                 if (err) {
                   throw err;
-                };
+                }; 
             console.log("README FILE CREATED");
             });
         })

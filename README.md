@@ -1,8 +1,8 @@
 
   
-  ## *1*
+  ## *README Generator*
 
-   ## MIT <br> [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+   ## IBM <br> [![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)
 
   ## Table of Contents
 
@@ -13,19 +13,18 @@
   -[GitHub](#Github) <br>
 
   ## Description
-  2
+  Using Node.js, inquirer and axios, the project demonstrates the functionality of all three by having the user input into the terminal to generate a README for a project based on the responses.
 
   ## Installation
-  3
+  None.
 
   ## Contributions
-  4
+  None.
 
   ## Test
-  5
+  
 
   ## GitHub
-  Username<br>
-  -bjsmak
+  Username: bjsmak <br>
   Profile Link below <br>
   -https://github.com/bjsmak
